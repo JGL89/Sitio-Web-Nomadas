@@ -1,11 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
-
-
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,7 +17,6 @@ import { PrivateComponent } from './components/private/private.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
 import { AuthGuard } from './guards/auth.guard';
 import { AdoptaComponent } from './components/adopta/adopta.component';
 
@@ -45,16 +40,6 @@ import { AdoptaComponent } from './components/adopta/adopta.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: 'listar-adopciones', component: ListarAdopcionesComponent },
-      { path: 'crear-adopcion', component: CrearAdopcionComponent },
-      { path: 'home', component: HomeComponent },
-      {path: 'private', component: PrivateComponent,canActivate: [AuthGuard],},
-      { path: 'register', component: RegisterComponent },
-      { path: 'login', component: LoginComponent },
-      { path: '', redirectTo: '/home', pathMatch: 'full' },
-      { path: '**', component: PageNotFoundComponent },
-    ]),
   FormsModule,  
 ],
   providers: [AuthGuard],

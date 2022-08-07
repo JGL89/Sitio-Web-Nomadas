@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdoptaComponent } from './components/adopta/adopta.component';
 import { CrearAdopcionComponent } from './components/crear-adopcion/crear-adopcion.component';
 import { HomeComponent } from './components/home/home.component';
 
@@ -16,6 +17,10 @@ const routes: Routes = [
   { 
     path: 'private', 
     component: ListarAdopcionesComponent 
+  },
+  { 
+    path: 'adopta', 
+    component: AdoptaComponent 
   },
 
   { path: 'crear-adopcion', 
